@@ -1,0 +1,46 @@
+# ============================================================
+# 依赖清单
+# 说明：本项目代码已兼容 langchain 0.3.x 与 1.x 两个版本线，
+#       不锁死具体小版本，减少安装冲突。
+# 安装：pip install -r requirements.txt
+# 离线安装：在有网机器执行
+#   pip download -r requirements.txt -d ./pkgs
+#   拷贝 pkgs 目录到目标机后：
+#   pip install --no-index --find-links=./pkgs -r requirements.txt
+# ============================================================
+
+# 核心框架
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langgraph>=0.2.0
+
+# 向量数据库与Embedding
+chromadb>=0.5.0
+
+# Web服务
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+sse-starlette>=2.1.0
+
+# 工程化
+slowapi>=0.1.9
+python-multipart>=0.0.9
+prometheus-client>=0.21.0
+structlog>=24.4.0
+python-dotenv>=1.0.1
+tenacity>=9.0.0
+
+# 工具集成（可选，用于真实联网搜索）
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+
+# 可选：真实大模型接入（按需安装）
+# langchain-openai>=0.2.0       # OpenAI / DeepSeek
+# langchain-qianfan>=0.2.1      # 文心一言
+# langchain-dashscope>=0.2.0    # 通义千问
+# redis>=5.1.0                  # 分布式缓存（不装则用内存缓存）
+# streamlit>=1.39.0             # 可选前端
+# gunicorn>=22.0.0              # 生产部署

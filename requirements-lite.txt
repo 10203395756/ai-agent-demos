@@ -1,0 +1,33 @@
+# ============================================================
+# 精简依赖清单（三个 Demo 单独运行 + 启动 Mock 服务所需的最小集合）
+# 安装：pip install -r requirements-lite.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+# ============================================================
+
+# 核心框架
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+langgraph>=0.2.0
+
+# 向量数据库（Demo1 默认 VECTOR_STORE=chroma，需要它）
+chromadb>=0.5.0
+
+# Web服务
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+python-multipart>=0.0.9
+sse-starlette>=2.1.0
+
+# 工程化
+slowapi>=0.1.9
+prometheus-client>=0.21.0
+structlog>=24.4.0
+python-dotenv>=1.0.1
+tenacity>=9.0.0
+
+# 可选：文档加载（仅在 Demo1 上传 PDF/Word/Markdown 真实文件时需要）
+# pypdf>=4.3.0
+# docx2txt>=0.8
